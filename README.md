@@ -24,7 +24,7 @@ manner are:
 * 😉 (wink): `;)`, `;-)`
 * 😊 (blush): `:$`, `:-$`
 * 😁 (grin): `:D`, `:-D`
-* 😳 (flushed): `8\|`, `8-\|`
+* 😳 (flushed): `8|`, `8-|`
 * 😲 (astonished): `:O`, `:-O`
 * 😲 (astonished): `8O`, `8-O`
 * 😛 (stuck_out_tongue): `:P`, `:-P`
@@ -37,10 +37,10 @@ manner are:
 * 😂 (joy): `:`, `:'-)`
 * 😈 (smiling_imp): `>:)`, `>:-)`
 * 😇 (innocent): `O:)`, `O:-)`
-* 😑 (expressionless): `:\|`, `:-\|`
+* 😑 (expressionless): `:|`, `:-|`
 * 😡 (rage): `:<`, `:-<`
 * 😒 (unamused): `:/`, `:-/`
-* 😴 (sleeping): `\|O`, `\|-O`
+* 😴 (sleeping): `|O`, `|-O`
 * 🙄 (face_with_rolling_eyes): `8-/`, `8/`
 * 🤐 (zipper_mouth_face): `:X`, `:-X`
 
