@@ -1,7 +1,8 @@
-## 🔥🔥🔥 Emoji Abbreviations in Vim 💻 🔥🔥🔥
+## Emoji Abbreviations in Vim 🔥
 
-This plugin enables emoji abbreviations in Vim❗Unicode emojis are now easy to
-type 💥🎊🍷🍻🎇.
+This plugin enables emoji abbreviations in Vim, making Unicode emojis easy to
+type. For instance typing `:)` produces 😄 (Unicode char 0x01f604),  or typing
+`:boom:` produces 💥 (Unicode char 0x1f4a5).
 
 ### Enabling
 
@@ -25,8 +26,7 @@ manner are:
 * 😊 (blush): `:$`, `:-$`
 * 😁 (grin): `:D`, `:-D`
 * 😳 (flushed): `8|`, `8-|`
-* 😲 (astonished): `:O`, `:-O`
-* 😲 (astonished): `8O`, `8-O`
+* 😲 (astonished): `:O`, `:-O`, `8O`, `8-O`
 * 😛 (stuck_out_tongue): `:P`, `:-P`
 * 😜 (stuck_out_tongue_winking_eye): `;P`, `;-P`
 * 😝 (stuck_out_tongue_closed_eyes): `XP`, `X-P`
@@ -75,7 +75,7 @@ fonts. On Debian buster:
 makes things work on `gnome-termial` and `gvim`. To make things work under
 `Konsole` (and also to get browsers to use the color emojis, and not the black
 and white ones from the *Symbola* or *Dejavu* fonts, you might have to also
-edit your `fonts.conf`:
+edit `~/.config/fontconfig/fonts.conf`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
