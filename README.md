@@ -50,9 +50,16 @@ silently ignored.
 
 ### Git-hub / Discord style abbreviatons
 
-Typing `:joy:` into a buffer should produce "😂". The huge (800+) list can be
-found [here](https://gist.github.com/rxaviers/7360908). Completions are
-enabled, so typing
+Typing `:joy:` into a buffer should produce "😂". A huge (800+) list of
+standard emoji aliases can be found
+[here](https://gist.github.com/rxaviers/7360908). In addition the short tags
+describing emojis are also completed. In the event of duplicates, they are
+numbered. E.g. `:happy:`, `:happy2:`, `:happy3:`, etc. (which produce 😀, 😄
+and 😆 respectively). These can also be produced using the aliases `:smile:`,
+`:laugh:`, `:laughing:` respectively. A complete list can be found in the file
+`autoload/gh_emoji/data.vim`.
+
+Completions are enabled. Typing
 
     :ang<C-X><C-O>
 
@@ -62,8 +69,8 @@ should produce a list with previews.
 
 All functions from the [vim-emoji](https://github.com/junegunn/vim-emoji)
 plugin are available. Just replace `emoji#` with `gh_emoji#`. The completion
-code is directly taken from this plugin, but the data is replaced with git-hub
-/ discord style names.
+code is directly taken from this plugin, but the data is replaced gemoji tags
+/ aliases.
 
 ### Color emojis
 
