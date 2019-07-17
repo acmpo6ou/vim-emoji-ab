@@ -48,16 +48,18 @@ manner are:
 what characters are keywords. The ones that are not legal abbreviations are
 silently ignored.
 
-### Git-hub / Discord style abbreviatons
+### Gemoji abbreviatons
 
 Typing `:joy:` into a buffer should produce "😂". A huge (800+) list of
 standard emoji aliases can be found
-[here](https://gist.github.com/rxaviers/7360908). In addition the short tags
-describing emojis are also completed. In the event of duplicates, they are
-numbered. E.g. `:happy:`, `:happy2:`, `:happy3:`, etc. (which produce 😀, 😄
-and 😆 respectively). These can also be produced using the aliases `:smile:`,
-`:laugh:`, `:laughing:` respectively. A complete list can be found in the file
-`autoload/gh_emoji/data.vim`.
+[here](https://gist.github.com/rxaviers/7360908). In addition to this a few
+extra completions (corresponding to emoji tags) are defined. The official
+emoji tags are not unique, so duplicates are sequentially numbered. E.g.
+`:happy:`, `:happy2:`, `:happy3:`, etc. (which produce 😀, 😄 and 😆
+respectively). These can also be produced using the aliases `:smile:`,
+`:laugh:`, `:laughing:` respectively. A list of all completions defined is in
+`tests/emojis-of-tags.vim`. A list of tags for each emoji is in
+`tests/tags-of-emojis.txt` for searching.
 
 Completions are enabled. Typing
 
@@ -65,17 +67,31 @@ Completions are enabled. Typing
 
 should produce a list with previews.
 
-### Helper functions
+### Advanced notes
+
+#### Completion lists
+
+The list of completions / emojis was generated automatically from `emoji.json`
+taken from the [gemoji](https://github.com/github/gemoji) project using the
+python script `tests/parse-emojis.py`. Here you can see that each emoji has
+both aliases (which appear to be unique), and tags (which are not unique). We
+define completions by combining these lists, and adding suffixes when tags are
+not unique.
+
+
+#### Helper functions
 
 All functions from the [vim-emoji](https://github.com/junegunn/vim-emoji)
 plugin are available. Just replace `emoji#` with `gh_emoji#`. The completion
-code is directly taken from this plugin, but the data is replaced gemoji tags
-/ aliases.
+code is directly taken from this plugin, but the data is replaced by the
+gemoji tags / aliases.
 
 ### Color emojis
 
-You can get color emojis in vim (even on a terminal!) by installing the right
-fonts. On Debian buster:
+ 
+
+You can get color emojis in vim (even on a terminal 😱🤯💥) by installing the
+right fonts. On Debian buster:
 
     apt install fonts-noto-color-emoji
 
