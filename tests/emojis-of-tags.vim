@@ -1,7 +1,3 @@
-" Git hub emoji list. Extracted from gemoji's emoji.json
-" Each alias, and each tag is used as an abbreviation. If a tag matches more
-" than one emoji, then it is numbered (e.g. happy, happy1, happy2, etc.)
-let s:emoji_code = {
 	\ '+1': '👍',
 	\ '-1': '👎',
 	\ '100': '💯',
@@ -2424,14 +2420,3 @@ let s:emoji_code = {
 	\ 'zoom': '🔍',
 	\ 'zzz': '💤',
 	\ 'zzz1': '😴',
-\ }
-
-" emoji.vim expects numbers, not characters for the emoji so convert them
-" here.
-for [k, v] in items(s:emoji_code)
-    let s:emoji_code[k] = char2nr(v)
-endfor
-
-function! gh_emoji#data#dict()
-  return s:emoji_code
-endfunction
