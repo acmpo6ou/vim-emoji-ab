@@ -58,8 +58,8 @@ emoji tags are not unique, so duplicates are sequentially numbered. E.g.
 `:happy:`, `:happy2:`, `:happy3:`, etc. (which produce 😀, 😄 and 😆
 respectively). These can also be produced using the aliases `:smile:`,
 `:laugh:`, `:laughing:` respectively. A list of all completions defined is in
-`tests/emojis-of-tags.vim`. A list of tags for each emoji is in
-`tests/tags-of-emojis.txt` for searching.
+[tests/emojis-of-tags.vim](tests/emojis-of-tags.vim). A list of tags for each emoji is in
+[tests/tags-of-emojis.txt](tests/tags-of-emojis.txt) for searching.
 
 Completions are enabled. Typing
 
