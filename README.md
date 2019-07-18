@@ -10,8 +10,8 @@ Run `:runtime macros/emojis.vim` to enable abbreviations in the current
 buffer. To always enable it for certain file types add the following to your
 `~/.vimrc`:
 
-    au FileType html,php,markdown,mmd,text,mail
-        \ runtime macros/emojis.vim
+    au FileType html,php,markdown,mmd,text,mail,gitcommit
+        \ runtime macros/emoji-ab.vim
 
 You need UTF-8 support to use this.
 
