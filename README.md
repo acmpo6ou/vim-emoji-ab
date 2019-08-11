@@ -1,19 +1,26 @@
 ## Emoji Abbreviations in Vim 🔥
 
-This plugin enables emoji abbreviations in Vim, making Unicode emojis easy to
-type. For instance typing `:)` produces 😄 (Unicode char 0x01f604),  or typing
-`:boom:` produces 💥 (Unicode char 0x1f4a5).
+This plugin enables emoji abbreviations and digraphs in Vim, making Unicode
+emojis easy to type. The digraphs are always enabled, and typing `<c-k>:D`
+produces 😁 (Unicode char 0x1f601). The abbreviations need to be manually
+enabled (see below). When abbreviations are enabled, typing `:)` produces 😄
+(Unicode char 0x1f604),  or typing `:boom:` produces 💥 (Unicode char
+0x1f4a5). All names from the [gemoji](https://github.com/github/gemoji)
+project are pre-defined.
+
+You need UTF-8 support to use this plugin.
 
 ### Enabling
 
-Run `:runtime macros/emojis.vim` to enable abbreviations in the current
-buffer. To always enable it for certain file types add the following to your
-`~/.vimrc`:
+Digraphs are enabled by default. To enable abbreviations, run
+
+    :runtime macros/emojis.vim
+    
+to enable abbreviations in the current buffer. To always enable it for certain
+file types add the following to your `~/.vimrc`:
 
     au FileType html,php,markdown,mmd,text,mail,gitcommit
         \ runtime macros/emoji-ab.vim
-
-You need UTF-8 support to use this.
 
 ### Smiley style abbreviations
 
@@ -36,6 +43,7 @@ manner are:
 * 😢 (cry): `:`, `:'-(`
 * 😂 (joy): `:`, `:'-)`
 * 😈 (smiling_imp): `>:)`, `>:-)`
+* 👿 (imp): `>:(`, `>:-(`
 * 😇 (innocent): `O:)`, `O:-)`
 * 😑 (expressionless): `:|`, `:-|`
 * 😡 (rage): `:<`, `:-<`
@@ -48,6 +56,10 @@ manner are:
 what characters are keywords. The ones that are not legal abbreviations are
 silently ignored.
 
+### Digraphs
+
+All two character smileys are defined as digraphs.
+
 ### Gemoji abbreviatons
 
 Typing `:joy:` into a buffer should produce "😂". A huge (800+) list of
@@ -58,8 +70,9 @@ emoji tags are not unique, so duplicates are sequentially numbered. E.g.
 `:happy:`, `:happy2:`, `:happy3:`, etc. (which produce 😀, 😄 and 😆
 respectively). These can also be produced using the aliases `:smile:`,
 `:laugh:`, `:laughing:` respectively. A list of all completions defined is in
-[tests/emojis-of-tags.vim](tests/emojis-of-tags.vim). A list of tags for each emoji is in
-[tests/tags-of-emojis.txt](tests/tags-of-emojis.txt) for searching.
+[tests/emojis-of-tags.vim](tests/emojis-of-tags.vim). A list of tags for each
+emoji is in [tests/tags-of-emojis.txt](tests/tags-of-emojis.txt) for
+searching.
 
 Completions are enabled. Typing
 
@@ -87,8 +100,6 @@ code is directly taken from this plugin, but the data is replaced by the
 gemoji tags / aliases.
 
 ### Color emojis
-
- 
 
 You can get color emojis in vim (even on a terminal 😱🤯💥) by installing the
 right fonts. On Debian buster:
