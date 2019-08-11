@@ -1,7 +1,7 @@
 " Vim plugin to conditionally expand abbreviations on a matching prefix.
 " Maintainer:	GI <gi1242+vim@nospam.com> (replace nospam with gmail)
 " Created:	Tue 09 Jul 2019 03:24:42 PM EDT
-" Last Changed:	Sat 13 Jul 2019 11:58:36 AM EDT
+" Last Changed:	Wed 24 Jul 2019 10:24:34 PM EDT
 " Version:	0.1
 "
 " Description: UTF8 Abbreviations for common smilies
@@ -11,9 +11,9 @@ if &encoding != 'utf-8'
 endif
 
 " Some smileys for cut and pasting:
-" 😀😁😂😃😅😆😇😈😉😊😋😌😍😎😏😐😑😒😓😔😕😖😗😘😙😚😛😜😝😞😟😠😡😢😣😤
-" 😥😦😧😨😩😪😫😬😭😮😯😰😱😲😳😴😵😶😷😸😹😺😻😼😽😾😿🙀🙁🙂🙃🙄🙅🙆🙇🙈
-" 🙉🙊🙋🙌🙍🙎🙏
+" 😀😁😂😃😅😆😇😈👿😉😊😋😌😍😎😏😐😑😒😓😔😕😖😗😘😙😚😛😜😝😞😟😠😡😢😣
+" 😤😥😦😧😨😩😪😫😬😭😮😯😰😱😲😳😴😵😶😷😸😹😺😻😼😽😾😿🙀🙁🙂🙃🙄🙅🙆🙇
+" 🙈🙉🙊🙋🙌🙍🙎🙏
 
 " :-) style abbreviations from wikipedia.
 " See https://en.wikipedia.org/wiki/Wikipedia:Emoticons
@@ -55,6 +55,8 @@ let s:smileys = {
 	\ ":'-)"    : ['😂', 'joy'],
 	\ '>:)'	    : ['😈', 'smiling_imp'],
 	\ '>:-)'    : ['😈', 'smiling_imp'],
+	\ '>:('     : ['👿', 'imp'],
+	\ '>:-('    : ['👿', 'imp'],
 	\ 'O:)'	    : ['😇', 'innocent'],
 	\ 'O:-)'    : ['😇', 'innocent'],
 	\ ':\|'	    : ['😑', 'expressionless'],
