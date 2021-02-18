@@ -1,7 +1,7 @@
 " Vim plugin to conditionally expand abbreviations on a matching prefix.
 " Maintainer:	GI <gi1242+vim@nospam.com> (replace nospam with gmail)
 " Created:	Sun 11 Aug 2019 11:55:39 AM EDT
-" Last Changed:	Sun 11 Aug 2019 11:56:50 AM EDT
+" Last Changed:	Fri 05 Jun 2020 07:55:27 PM EDT
 " Version:	0.1
 "
 " Description:
@@ -23,6 +23,7 @@ let s:digraphs = {
 	\ '%/'	    : ['😕', 'confused'],
 	\ '8)'	    : ['😎', 'sunglasses'],
 	\ 'B)'	    : ['😎', 'sunglasses'],
+	\ ';('	    : ['😢', 'cry'],
 	\ ':\|'	    : ['😑', 'expressionless'],
 	\ ':<'	    : ['😡', 'rage'],
 	\ ':/'	    : ['😒', 'unamused'],
