@@ -73,15 +73,6 @@ let s:smileys = {
 	\ ':-X'	    : ['🤐', 'zipper_mouth_face'],
 \ }
 
-for [ab, em] in items( s:smileys )
-    try
-	exec ':iab <buffer>' ab em[0]
-    catch
-	" Ignore evrything that's not a legal abbreviation
-	"echomsg "Disabled illegal abbreviation" ab em
-    endtry
-endfor
-
 " :joy: style abbreviations for git-hub emojis
 for em in gh_emoji#list()
     try
