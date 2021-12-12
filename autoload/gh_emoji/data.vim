@@ -2515,6 +2515,7 @@ let s:emoji_code = {
 	\ 'zoom': '🔍',
 	\ 'zzz': '💤',
 	\ 'zzz1': '😴',
+	\ 'info': '🛈 ',
 \ }
 
 " emoji.vim expects numbers, not characters for the emoji so convert them
